@@ -1,0 +1,64 @@
+
+config dnsmasq
+	option domainneeded '1'
+	option localise_queries '1'
+	option rebind_protection '1'
+	option rebind_localhost '1'
+	option local '/lan/'
+	option domain 'lan'
+	option expandhosts '1'
+	option authoritative '1'
+	option readethers '1'
+	option leasefile '/tmp/dhcp.leases'
+	option resolvfile '/tmp/resolv.conf.d/resolv.conf.auto'
+	option nonwildcard '1'
+	option localservice '1'
+	option filter_aaaa '1'
+	option port '53'
+	option sequential_ip '1'
+
+config dhcp 'lan'
+	option interface 'lan'
+	option start '100'
+	option limit '150'
+	option leasetime '12h'
+	option force '1'
+
+config dhcp 'wan'
+	option interface 'wan'
+	option ignore '1'
+
+config srvhost
+	option srv '_vlmcs._tcp'
+	option target 'OpenWrt'
+	option port '1688'
+	option class '0'
+	option weight '100'
+
+config host
+	option name 'I9700-Ubuntu'
+	option dns '1'
+	option mac '52:76:9f:3c:c2:14'
+	option ip '192.168.16.6'
+	option leasetime 'infinite'
+
+config host
+	option name 'MJ-XM-Gateway-V2-01'
+	option dns '1'
+	option mac 'f0:b4:29:b4:3d:94'
+	option ip '192.168.16.21'
+	option leasetime 'infinite'
+
+config host
+	option name 'MJ-XM-Gateway-V3-01'
+	option dns '1'
+	option mac '64:90:c1:78:37:1a'
+	option ip '192.168.16.22'
+	option leasetime 'infinite'
+
+config host
+	option name 'MJ-XM-Gateway-V3-01'
+	option dns '1'
+	option mac '64:90:c1:78:37:1a'
+	option ip '192.168.16.22'
+	option leasetime 'infinite'
