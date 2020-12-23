@@ -1,3 +1,5 @@
+本资源github地址：https://github.com/coLATin/argon-mod
+
 # 说明
 * 本主题为魔改，非单独主题；
 * 使用本主题一定要先安装并使用Argon主题，Github地址：https://github.com/jerrykuku/luci-theme-argon
@@ -30,7 +32,3 @@
 
 窄屏自适应
 ![](https://github.com/coLATin/argon-mod/blob/master/iShot2020-12-23-15.00.23.png)
-
-
-
-
