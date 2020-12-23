@@ -12,8 +12,24 @@
 * 基于Argon Update Log 2020.09.13 v2.2.5版本
 
 # 部分截图展示
+登录页面
+![](https://github.com/coLATin/argon-mod/blob/master/iShot2020-12-23-14.51.43.png)
 
+先选择并应用argon主题
+![](https://github.com/coLATin/argon-mod/blob/master/iShot2020-12-23-14.55.51.png)
 
+![](https://github.com/coLATin/argon-mod/blob/master/iShot2020-12-23-14.56.29.png)
+
+支持daylight和dark（白天/夜晚）模式
+![](https://github.com/coLATin/argon-mod/blob/master/iShot2020-12-23-14.59.24.png)
+
+![](https://github.com/coLATin/argon-mod/blob/master/iShot2020-12-23-14.58.29.png)
+
+宽屏自适应
+![](https://github.com/coLATin/argon-mod/blob/master/iShot2020-12-23-15.00.10.png)
+
+窄屏自适应
+![](https://github.com/coLATin/argon-mod/blob/master/iShot2020-12-23-15.00.23.png)
 
 
 
