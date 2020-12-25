@@ -11,6 +11,44 @@
 		background-position: 0% 50%;
 	}
 }
+/* 针对插件单独hacking样式 by uray */
+/* ADG hacking */
+#cbi-AdGuardHome-AdGuardHome-httpport .cbi-value-description input{
+    width:auto !important; 
+    border: 0px !important;
+    text-align:center;
+    font-weight: normal !important;
+    color:var(--uray-white)!important;
+    background-color: var(--uray-blue-normal)!important;
+}
+#cbi-AdGuardHome-AdGuardHome-httpport .cbi-value-description input:hover{
+    cursor:pointer !important;
+}
+#cbi-AdGuardHome-AdGuardHome-downloadlinks .cbi-input-textarea{
+    width: 500px !important;
+    min-width: 400px;
+}
+#cbi-logview .cbi-input-textarea{
+    margin-top: 0.8rem !important;
+    padding: 0.8rem !important;
+}
+#cbi-AdGuardHome-AdGuardHome-escconf{
+    margin-top: 0.8rem;
+    border-radius: 12px;
+}
+
+/* Passwall hacking */
+._now_use{
+    color: #000000 !important;
+    background:#D7EAFE !important;
+}
+._now_use td{
+    color: #525f7f !important;
+}
+#_log_fieldset{
+    padding: 0.8rem;
+}
+
 :root {
     --primary:#0A84FF;
     --dark-primary:#0A84FF;
@@ -34,7 +72,7 @@
     --gray:#8898aa;
     --gray-dark:#32325d;
     --light:#ced4da;
-    --lighter:#e9ecef;
+    --lighter:#FFFFFF;
     --secondary:#f7fafc;
     --success:#2dce89;
     --info:#11cdef;
@@ -54,7 +92,9 @@
     --blur-opacity-dark:.5;
     --font-family-sans-serif:"Google Sans", "Microsoft Yahei", "WenQuanYi Micro Hei", "sans-serif", "Helvetica Neue", "Helvetica", "Hiragino Sans GB";
     --font-family-monospace:SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
-    --font-family-normal:Open Sans, PingFangSC-Regular, Microsoft Yahei, WenQuanYi Micro Hei, "Helvetica Neue", Helvetica, Hiragino Sans GB, sans-serif
+    --font-family-normal:Open Sans, PingFangSC-Regular, Microsoft Yahei, WenQuanYi Micro Hei, "Helvetica Neue", Helvetica, Hiragino Sans GB, sans-serif;
+    --uray-blue-normal:#0A84FF;
+    --uray-white:#FFFFFF;
   }
 
 html,body {
@@ -72,7 +112,7 @@ html {
 }
 
 body {
-    font-size: .875rem;
+    font-size: 0.9rem;
     background-color: #f4f5f7;
     background-color: var(--background-color)
 }
@@ -81,7 +121,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    -webkit-tap-highlight-color: transparent
+    /* -webkit-tap-highlight-color: transparent */
 }
 
 ::selection {
@@ -310,7 +350,7 @@ li {
     border-radius: 0;
     border-bottom: 1px solid #fff;
     border-bottom: 1px solid var(--white);
-    background-color: transparent;
+    /* background-color: transparent; */
     background-clip: padding-box;
     box-shadow: 0 3px 2px rgba(233,236,239,0.05);
     outline: none
@@ -589,7 +629,7 @@ footer a {
     color: #4c4c4c;
     color: var(--menubar-text-color);
     transition: all .2s;
-    font-size: .875rem
+    font-size: 1.0rem
 }
 
 .main .main-left .nav li.slide ul li a::after {
@@ -743,7 +783,7 @@ footer a {
     white-space: nowrap;
     color: rgba(0,0,0,0.6);
     transition: all .2s;
-    font-size: .875rem;
+    font-size: 0.9rem;
 }
 
 .main .main-left .nav li.slide .slide-menu li a::after {
@@ -875,7 +915,7 @@ footer a {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    font-size: .875rem;
+    font-size: 0.9rem;
     width: auto !important;
     line-height: 1em
 }
@@ -1105,7 +1145,7 @@ ul li .cbi-input-checkbox {
     width: 40px;
     height: 20px;
     cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
+    /* -webkit-tap-highlight-color: transparent; */
     transform: translate3d(0, 0, 0);
     margin: 1em 0
 }
@@ -1376,26 +1416,34 @@ td>table>tbody>tr>td,.td>.table>.tbody>.tr>.td {
 
 .cbi-button-find,.cbi-button-link,.cbi-button-neutral {
     color: #fff !important;
-    border: 1px solid #f0ad4e !important;
+    /* border: 1px solid #f0ad4e !important; */
     background-color: #f0ad4e !important
+}
+
+.cbi-button{
+    color: #fff !important;
+    /* border: 1px solid #d43f3a !important; */
+    /* background-color: #fb6340 !important; */
+    background-color: var(--uray-blue-normal) !important
 }
 
 .cbi-button-edit,.cbi-button-apply,.cbi-button-reload,.cbi-button-action {
     color: #0A84FF;
-    border: 1px solid #0A84FF;
-    background-color: transparent
+    /* border: 1px solid #0A84FF; */
+    /* background-color: transparent */
 }
 
 .cbi-page-actions .cbi-button-apply+.cbi-button-save,.cbi-button-add,.cbi-button-save,.cbi-button-positive {
     color: #46b8da;
     border: 1px solid #46b8da;
-    background-color: transparent
+    /* background-color: transparent */
 }
 
 .cbi-section-remove>.cbi-button,.cbi-button-remove,.cbi-button-reset,.cbi-button-negative {
     color: #fff !important;
-    border: 1px solid #d43f3a !important;
-    background-color: #fb6340 !important
+    /* border: 1px solid #d43f3a !important; */
+    /* background-color: #fb6340 !important; */
+    background-color: #FF4D21 !important
 }
 
 .cbi-page-actions .cbi-button-link:first-child {
@@ -1686,7 +1734,7 @@ select {
 }
 
 select,input {
-    font-size: .875rem;
+    font-size: 0.9rem;
     transition: all .15s ease-in-out;
     line-height: 1.5;
     padding: .625rem .75rem;
@@ -1730,7 +1778,7 @@ hr {
 }
 
 .kpi {
-    font-size: .875rem
+    font-size: 1.0rem
 }
 
 fieldset[id^="cbi-apply-"] {
@@ -1758,7 +1806,7 @@ fieldset[id^="cbi-apply-"] {
     position: initial;
     width: auto;
     height: auto;
-    font-size: .875rem;
+    font-size: 0.9rem;
     margin-left: 0rem;
     margin-top: .8rem;
     display: block
@@ -1799,13 +1847,13 @@ table>tbody>tr>td,table>tbody>tr>th,table>tfoot>tr>td,table>tfoot>tr>th,table>th
 }
 
 .cbi-section-table {
-    font-size: .875rem;
+    font-size: 0.9rem;
     border: none;
     margin: 0 !important
 }
 
 .status-bar {
-    font-size: .875rem
+    font-size: 0.9rem
 }
 
 .cbi-section-table-row:last-child {
@@ -1964,7 +2012,7 @@ table {
 }
 
 table>tbody>tr>td,table>tfoot>tr>td,table>thead>tr>td {
-    font-size: .875rem;
+    font-size: 0.9rem;
     color: #525f7f;
     line-height: 1.4em;
     vertical-align: middle !important;
@@ -1977,9 +2025,9 @@ table>tbody>tr>th,table>tfoot>tr>th,table>thead>tr>th {
     padding-left: 1.5rem;
     color: #8898aa;
     background-color: #f6f9fc;
-    font-size: .65rem;
-    padding-top: .75rem;
-    padding-bottom: .75rem;
+    font-size: .9rem;
+    padding-top: .8rem;
+    padding-bottom: .8rem;
     letter-spacing: 1px;
     text-transform: uppercase;
     border-bottom: 1px solid #e9ecef
@@ -2057,7 +2105,7 @@ td>table>tbody>tr>td {
 }
 
 .tabs li {
-    font-size: .875rem;
+    font-size: 0.9rem;
     display: inline-block;
     padding: .875rem 0;
     border-bottom: .18751rem solid rgba(0,0,0,0)
@@ -2098,7 +2146,7 @@ td>table>tbody>tr>td {
 .cbi-tabmenu li {
     background: #dce3e9;
     display: inline-block;
-    font-size: .875rem;
+    font-size: 0.9rem;
     border-top-left-radius: .25rem;
     border-top-right-radius: .25rem;
     padding: .5rem 0;
@@ -2313,7 +2361,7 @@ td>table>tbody>tr>td {
 }
 
 .cbi-dropdown {
-    font-size: .875rem;
+    font-size: 0.9rem;
     transition: all .15s ease-in-out;
     line-height: 1.5;
     height: calc(2.75rem + 2px);
@@ -2391,7 +2439,7 @@ select[multiple="multiple"] {
 .cbi-value-field,.cbi-value-description {
     display: table-cell;
     line-height: 1.6;
-    font-size: .875rem
+    font-size: 0.9rem;
 }
 
 .cbi-value-helpicon>img {
@@ -2404,16 +2452,18 @@ select[multiple="multiple"] {
 
 .cbi-value-description {
     font-size: small;
-    opacity: .5;
-    padding: .5rem
+    /* opacity: .5; */
+    padding: .5rem;
+    color: #A3A3A3;
+
 }
 
 .cbi-value-title {
     word-wrap: break-word;
-    font-size: .875rem;
+    font-size: 0.9rem;
     line-height: 1.6;
     color: #525f7f;
-    padding: .7rem;
+    padding: .9rem;
     padding-left: 0;
     width: 23rem;
     float: left;
@@ -2485,13 +2535,14 @@ td>.ifacebadge {
 
 .cbi-input-textarea {
     width: 100%;
-    border: 0;
+    border: 1px solid #dee2e6;
+    border-radius: 12px;
     outline: none;
     min-height: 14rem;
     padding: .8rem;
-    font-size: .8rem;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    color: black
+    font-size: .9rem;
+    font-family: inherit;
+    color: black;
 }
 
 #syslog {
@@ -2650,11 +2701,11 @@ td>.ifacebadge,.td>.ifacebadge {
 .cbi-value-field>ul>li {
     display: flex;
     align-items: center;
-    font-size: .875rem
+    font-size: 0.9rem
 }
 
 .cbi-value-field>ul>li .ifacebadge {
-    font-size: .875rem;
+    font-size: 0.9rem;
     background-color: #eee;
     display: flex;
     align-items: center;
@@ -2696,7 +2747,7 @@ input[name="ping"],input[name="traceroute"],input[name="nslookup"] {
 
 .label {
     padding: .3rem .8rem;
-    font-size: .8rem;
+    font-size: .9rem;
     font-weight: bold;
     color: #fff !important;
     text-transform: uppercase;
@@ -2823,7 +2874,7 @@ input[name="ping"],input[name="traceroute"],input[name="nslookup"] {
 
 .node-system-packages .cbi-section-node .cbi-value {
     padding: .5rem 1rem;
-    font-size: .875rem
+    font-size: 0.9rem
 }
 
 .node-system-packages br {
@@ -2851,12 +2902,12 @@ input[name="ping"],input[name="traceroute"],input[name="nslookup"] {
 }
 
 .Changes .cbi-section {
-    font-size: .875rem;
+    font-size: 0.9rem;
     padding: 1rem
 }
 
 .node-network-diagnostics {
-    font-size: .875rem
+    font-size: 0.9rem
 }
 
 .node-network-diagnostics #diag-rc-output {
@@ -2865,7 +2916,7 @@ input[name="ping"],input[name="traceroute"],input[name="nslookup"] {
 }
 
 .node-network-diagnostics #diag-rc-output pre {
-    font-size: .875rem
+    font-size: 0.9rem
 }
 
 .node-network-diagnostics .cbi-section div {
@@ -2902,7 +2953,7 @@ input[name="ping"],input[name="traceroute"],input[name="nslookup"] {
     }
 
     .cbi-button {
-        font-size: .8rem
+        font-size: .9rem
     }
 
     header>.container>.pull-right>* {
