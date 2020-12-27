@@ -622,8 +622,8 @@ footer a {
     position: relative;
     height: 36px;
     line-height: 36px;
-    margin: .2rem 1rem .2rem 3rem;
-    /* padding: 0 0 0 0.6rem; */
+    margin: .2rem 1rem .2rem 1rem;
+    padding: 0 0 0 2rem;
     text-decoration: none;
     white-space: nowrap;
     color: #4c4c4c;
@@ -639,7 +639,7 @@ footer a {
     height: 2px;
     left: 0;
     bottom: 0;
-    background-color: #0A84FF;
+    /* background-color: #0A84FF; */
     background-color: var(--primary);
     transition: all .2s
 }
@@ -722,9 +722,10 @@ footer a {
 }
 
 .main .main-left .nav li.slide .menu.active::after {
-    transform: rotate(90deg)
+    /* transform: rotate(90deg) */
 }
 
+/* 一级菜单图标 */
 .main .main-left .nav li.slide .menu[data-title=Status]:before {
     content: "\e906";
     color: var(--primary)
@@ -774,6 +775,8 @@ footer a {
 .main .main-left .nav li.slide .menu[data-title=Logout]:before {
     content: "\e907";
 }
+
+/* 二级菜单图标 */
 
 .main .main-left .nav li.slide .slide-menu li a {
     position: relative;
@@ -2823,7 +2826,8 @@ input[name="ping"],input[name="traceroute"],input[name="nslookup"] {
     width: 100% !important;
     background-color: #fff !important;
     height: 1.4rem !important;
-    border-radius: .25rem;
+    /* border-radius: .25rem; */
+    border-radius: 12px;
     margin: .5rem 0;
     overflow: hidden
 }
